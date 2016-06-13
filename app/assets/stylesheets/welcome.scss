@@ -13,7 +13,11 @@ h1, h2, p {
 h2 {
 	font-size: 28px;
 }
-[contents="left"] {
+body {
+	background-color: #111;
+}	
+[contents="left"],
+[contents="menu"] {
 	display: none;
 	opacity: 0;
 }
@@ -58,12 +62,28 @@ h2 {
 	[contents="contact"],
 	[contents="footer"] {
 		min-height: 100vh;
-		min-width: calc(100% - 6px);
-		border: 3px solid #4a4f55; 
+		width: calc(100% - 4px);
+		border: 2px solid #4a4f55; 
 		border-top: 0;
 		border-bottom: 0;
 		margin-bottom: -3px;
 		position: relative;
+	}
+	[contents="landing"] {
+		a.bottom {
+			text-transform: uppercase;
+			text-decoration: none;
+			color: white;
+			font-family: 'Simplifica';
+			font-size: 20px;
+			max-width: 30px;
+			position: absolute;
+			top: calc(100% - 80px);
+			left: 20px;
+			.arrow {
+				width: 40px;
+			}
+		}
 	}
 	[contents="boutique"] {
 		display: inline-block;
@@ -142,8 +162,8 @@ h2 {
 			padding-left: 30px;
 			max-width: 480px;
 			[contents="partner"] {
-				height: 102px;
-				width: 102px;
+				height: 82px;
+				width: 82px;
 				margin: 0 15px 15px 0;
 				background-color: gray;
 				display: inline-block;
@@ -203,10 +223,6 @@ h2 {
 			} 
 		}
 	}
-	[contents="footer"] {
-		background-color: #1c1c1c;
-		max-height: 150px !important;
-	}
 	.pink {
 		color: #f54a7e;
 		fill: #f54a7e; 
@@ -218,7 +234,71 @@ h2 {
 		stroke: #18b3d5;
 	}
 }
-body {
-	background-color: #111;
-	
-}	
+[contents="footer"] {
+	background-color: #1c1c1c;
+	min-height: 150px;
+	height: 150px;
+	margin: 0;
+	width: 100%;
+	[contents="cv"] {
+		position: relative;
+		min-height: 150px;
+		border: 2px solid #4a4f55;
+		border-top: 0;
+		border-bottom: 0;
+		p, a {
+			font-size: 15px;
+			color: #373e46;
+			text-align: right;
+			font-family: 'Muller';
+			display: block;
+			position: relative;
+			bottom: -110px;
+			margin-right: 10px;
+		}
+		a {
+			font-style: italic;
+		}
+	}
+}
+@media screen and (min-width: 760px) {
+	[contents="landing"], 
+	[contents="boutique"],
+	[contents="contact"],
+	[contents="cv"] {
+		width: calc(100% - 200px) !important;
+	}
+	[contents="menu"] {
+		display: inline-block;
+		opacity: 100;
+		position: fixed;
+		top: 20px;
+		right: 30px;
+		a {
+			font-family: 'Muller';
+			color: #4d4d4d;
+			font-size: 15px;
+			text-decoration: none;
+			display: block;
+			padding: 5px 0;
+			text-align: right;
+			font-weight: bold;
+		}
+	}
+}
+@media screen and (min-width: 1020px) {
+	[contents="landing"], 
+	[contents="boutique"],
+	[contents="contact"],
+	[contents="cv"] {
+		width: calc(100% - 400px) !important;
+		margin-left: 260px;
+	}
+	.hidden-large {
+		position: fixed;
+		left: 0;
+	}
+	hr {
+		width: 50% !important;
+	}
+}
