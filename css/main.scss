@@ -1,6 +1,3 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 * {
 	margin: 0;
 	padding: 0;
@@ -261,6 +258,26 @@ body {
 		}
 	}
 }
+@font-face {
+	font-family: 'Simplifica';
+	src: url('fonts/Simplifica.eot');
+	src: url('fonts/Simplifica.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Simplifica.woff') format('woff'),
+		url('fonts/Simplifica.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: url('fonts/MullerRegular.eot');
+	src: url('fonts/MullerRegular.eot?#iefix') format('embedded-opentype'),
+		url('fonts/MullerRegular.woff') format('woff'),
+		url('fonts/MullerRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 @media screen and (min-width: 760px) {
 	[contents="landing"], 
 	[contents="boutique"],
