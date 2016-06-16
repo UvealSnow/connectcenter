@@ -322,8 +322,8 @@ body {
 		border: 2px solid #4a4f55; 
 		border-top: 0;
 		border-bottom: 0;
-		border-right: 0;
 		padding-left: 36px;
+		width: calc(100% - 260px);
 		color: white;
 		ul {
 			font-family: 'Muller';
@@ -352,8 +352,8 @@ body {
 		height: 48px;
 	    width: 48px;
 	    position: absolute;
-	    top: 14px;
-	    right: 14px;
+	    top: 40px;
+	    right: 250px;
 	    cursor: pointer;
 		div {
 			width:100%; 
@@ -494,13 +494,13 @@ body {
 			}
 		}
 	}
-	
 	[contents="menu"] {
 		display: inline-block;
 		opacity: 100;
 		position: fixed;
 		top: 20px;
 		right: 30px;
+		z-index: 99;
 		a {
 			font-family: 'Muller';
 			color: #4d4d4d;
