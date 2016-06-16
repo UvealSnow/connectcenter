@@ -6,6 +6,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, handheld"/>
+		<script src="js/vendor/jquery.js"></script>
+		<script src="js/vendor/gsap/TweenMax.min.js"></script>
+		<script src="js/vendor/gsap/TimelineMax.min.js"></script>
+		<script src="js/application.js"></script>
 	</head>
 	<body>
 		<div contents="left">
@@ -13,63 +17,71 @@
 		</div>
 		<div contents="main">
 			<div contents="landing">
-				<h2 class="hidden-large">connect center</h2>
+				<canvas id="c"></canvas>
+				<img class="hidden-large" src="img/logo_white.png" alt="connect center">
 				<h1>conecta <span class="pink">con</span> <span class="blue">tus</span> clientes</h1>
 				<p>Es el siglo XXII y necesitas conectar con tus clientes. Acerca a tu área de ventas y seral cliente por medio de nuestro Call Center Boutique.</p>
 				<a class="bottom" href>ver más <img src="img/down-arrow.svg" class="arrow"></a>
 			</div>
 			<hr>
 			<div contents="boutique">
-				<h2>connect center</h2>
-				<p class="pink"><span>boutique services</span></p>
+				<h2>quiénes somos</h2>
 				<div contents="text">
 					<img src="img/pink-hint-1.svg" class="pink-hint">
-					<p>Creamos soluciones personalizadas de atención al cliente para pequeñas y medianas empresas.</p>
-					<p>Con más de 240 estaciones de trabajo, 15 años de experiencia en el mercado, y el perfil profesional de nuestros consultores hacen que en el mercado. </p>
+					<p>Somos una sastrería de soluciones integrales de Contact Center, con estándares de industria, personal calificado y respaldo ecnológico. Tenemos experiencia directiva de más de 15 años en la industria de Centros de Contacto gestionando operaciones más de 1,000 estaciones.</p>
+					<p>La experiencia, exclusivida y elevado perfil de nuestros Ejecutivos de Atención nos diferencían de los centros de contacto comunes.</p>
+				</div>
+				<div contents="circles">
+					<div class="pink" data-button="infrastructure">
+						<p>ver infraestructura</p>
+					</div>
+					<div class="blue" data-button="directory">
+						<p>ver directorio</p>
+					</div>
 				</div>
 				<h2 class="pink">consultoría</h2>
 				<div contents="list">
 					<div contents="item">
-						<img src="img/procesos.svg" class="pink">
+						<img src="img/procesos.svg" alt="" class="pink">
 						<p>Procesos</p>
 					</div>
 					<div contents="item">
-						<img src="img/tecnologia.svg" class="pink">
+						<img src="img/tecnologia.svg" alt="" class="pink">
 						<p>Diseñamos, definimos e implantamos procesos y procedimientos buscando siempre la satisfacción del cliente.</p>
 					</div>
 					<div contents="item">
-						<img src="img/tecnologia.svg" class="pink">
+						<img src="img/tecnologia.svg" alt="" class="pink">
 						<p>Tecnología</p>
 					</div>
 					<div contents="item">
-						<img src="img/talento-y-formacion.svg" class="pink">
+						<img src="img/talento-y-formacion.svg" alt="" class="pink">
 						<p>Talento y formación</p>
 					</div>
 				</div>
 				<h2 class="blue">servicios</h2>
 				<div contents="list">
 					<div contents="item">
-						<img src="img/servicio-al-cliente.svg" class="blue">
+						<img src="img/servicio-al-cliente.svg" alt="" class="blue">
 						<p>Servicio al cliente</p>
 					</div>
 					<div contents="item">
-						<img src="img/cobranza-y-recuperacion.svg" class="blue">
+						<img src="img/cobranza-y-recuperacion.svg" alt="" class="blue">
 						<p>Cobranza y recuperación</p>
 					</div>
 					<div contents="item">
-						<img src="img/ventas-consultivas.svg" class="blue">
+						<img src="img/ventas-consultivas.svg" alt="" class="blue">
 						<p>Ventas consultiva</p>
 					</div>
 					<div contents="item">
-						<img src="img/medios-digitales.svg" class="blue">
+						<img src="img/medios-digitales.svg" alt="" class="blue">
 						<p>Medios digitales</p>
 					</div>
 					<div contents="item">
-						<img src="img/soporte-tecnico.svg" class="blue">
+						<img src="img/soporte-tecnico.svg" alt="" class="blue">
 						<p>Soporte técnico</p>
 					</div>
 					<div contents="item">
-						<img src="img/servicios-virtuales.svg" class="blue">
+						<img src="img/servicios-virtuales.svg" alt="" class="blue">
 						<p>Servicios virtuales</p>
 					</div>
 				</div>
@@ -111,10 +123,71 @@
 			</div>
 		</div>
 		<div contents="menu">
+			<a href>inicio</a>
+			<a href>nosotros</a>
 			<a href>servicios</a>
-			<a href>consultoría</a>
 			<a href>contacto</a>
-			<a href>experiencia</a>
+			<a href>bolsa de trabajo</a>
 		</div>
+		<div data-slide="infrastructure" class="full-page offcanvas">
+			<div class="content">
+				<div class="title">
+					<div class="close-button">
+						<div></div>
+						<div></div>
+					</div>
+					<h2>infraestructura</h2>
+				</div>
+				<div class="paragraph">
+					<img src="img/pink-hint-1.svg" alt="Pink Hint">
+					<div class="full-width">
+						<h2>2 campus en la Ciudad de México</h2>
+						<p class="blue">Campus San Ángel</p>
+						<p class="blue">Campus Roma</p>
+						<h2>240 estaciones de trabajo</h2>
+						<div class="specifics">
+							<ul>
+								<li>Telefonía y Canales Digitales</li>
+								<li>PBX - Collab</li>
+								<li>PBX - Asterisk (outbount)</li>
+							</ul>
+							<ul>
+								<li>Equipos de Redes</li>
+								<li>Core de Red</li>
+								<li>Estaciones Cableadas CAT 5E</li>
+								<li>Servidor de Dominio</li>
+								<li>Firewall</li>
+								<li>Estación de Trabajo con Core i3 de 2 GHz o más con monitores de 19 pulgadas</li>
+							</ul>
+							<ul>
+								<li>Infraestructura</li>
+								<li>Redundancia - Interconexión entre los dos centros</li>
+								<li>Enlaces Telmex (voz y datos)</li>
+								<li>Enlaces de Troncales VOIP</li>
+								<li>Redundancia de Internet con diferentes Carriers</li>
+								<li>UPS y planta de energía</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-slide="directory" class="full-page offcanvas">
+			<div class="content">
+				<div class="title">
+					<div class="close-button">
+						<div></div>
+						<div></div>
+					</div>
+					<h2>directorio</h2>
+				</div>
+				<div class="paragraph">
+
+					<div class="full-width">
+					</div>
+				</div>
+			</div>
+		</div>	
+		<script type="text/javascript" src="js/vendor/canvas.js"></script>
 	</body>
 </html>

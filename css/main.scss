@@ -12,7 +12,14 @@ h2 {
 }
 body {
 	background-color: #111;
-}	
+}
+.offcanvas {
+	width:100%;
+	position:fixed; 
+	left:100%; 
+	background:rgba(11,11,11,.99);
+	z-index:50;
+}
 [contents="left"],
 [contents="menu"] {
 	display: none;
@@ -48,7 +55,11 @@ body {
 	}
 	img {
 		display: inline-block;
-		
+	}
+	img.hidden-large {
+		opacity: 0;
+		display: none;
+
 	}
 	hr {
 		border: 1.5px solid #4a4f55;
@@ -65,6 +76,7 @@ body {
 		border-bottom: 0;
 		margin-bottom: -3px;
 		position: relative;
+		overflow: hidden;
 	}
 	[contents="landing"] {
 		a.bottom {
@@ -80,6 +92,14 @@ body {
 			.arrow {
 				width: 40px;
 			}
+		}
+		canvas {
+			position: absolute;
+			z-index: -1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
 		}
 	}
 	[contents="boutique"] {
@@ -102,9 +122,47 @@ body {
 				vertical-align: top;
 				display: block;
 				padding-left: 58px;
+				text-align: justify;
 			}
 			p:last-child {
 				padding-top: 12px;
+			}
+		}
+		[contents="circles"] {
+			div {
+				height: 120px;
+				width: 120px;
+				border-radius: 120px;
+				display: inline-block;
+				margin: 14px 0 14px 18px;
+				position: relative;
+				vertical-align: top;
+				cursor: pointer;
+				transition: border-color 1s ease;
+				p {
+					display: block;
+					padding: 15px;
+					text-align: center;
+					padding: 0;
+					max-width: 100px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					cursor: pointer;
+				}
+			}
+			.pink {
+				border: 2px solid #f54a7e;
+			}
+			.pink:hover {
+				border-color: #f40a51;
+			}
+			.blue {
+				border: 2px solid #108ca7;
+			}
+			.blue:hover {
+				border-color: #016479;
 			}
 		}
 		[contents="list"] {
@@ -258,6 +316,102 @@ body {
 		}
 	}
 }
+[data-slide] {
+	height: 100%;
+	div.content {
+		border: 2px solid #4a4f55; 
+		border-top: 0;
+		border-bottom: 0;
+		border-right: 0;
+		padding-left: 36px;
+		color: white;
+		ul {
+			font-family: 'Muller';
+		}
+		.paragraph {
+			h2, 
+			p.blue {
+				position: relative;
+				top: -150px;
+				left: 50px;
+			}
+			p.blue {
+				top: -180px;
+				font-size: 18px;
+				color: #18B3D5;
+				padding-top: 10px;
+			}
+		}
+		.specifics {
+			position: relative;
+			top: -150px;
+			padding-left: 30px;
+		}
+	}
+	.close-button {   
+		height: 48px;
+	    width: 48px;
+	    position: absolute;
+	    top: 14px;
+	    right: 14px;
+	    cursor: pointer;
+		div {
+			width:100%; 
+			height:2px;
+		}
+		div:first-of-type {
+			position:absolute; 
+			top:22px; 
+			transform:rotateZ(45deg);
+			background:white;
+		}
+		div:last-of-type {
+			position:absolute; 
+			top:22px; 
+			transform:rotateZ(-45deg);
+			background:white;
+		}
+	}
+	h2 {
+		padding: 40px 0px;
+		display: inline-block;
+	}
+	.paragraph {
+		div {
+			h2:not(:first-of-type) {
+				padding-top:18px;
+			}
+			p {
+				padding-top:18px;
+			}
+			.specifics {
+				display:flex; 
+				flex-direction:row; 
+				flex-wrap:wrap;
+				justify-content: space-between;
+			}
+			ul {
+				display: inline-block;
+				flex-direction:column; 
+				flex-shrink:0; 
+				padding-top:24px;
+				width:300px;
+				text-align:left;
+				li {
+					line-height:175%;
+				}
+
+				li:first-of-type {
+					color: #f54a7e;
+					font-size:24px;
+				}
+				li:not(:first-of-type) {
+					padding-left:18px;
+				}
+			}
+		}
+	}
+}
 @font-face {
 	font-family: 'Simplifica';
 	src: url('fonts/Simplifica.eot');
@@ -267,7 +421,6 @@ body {
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'Muller';
 	src: url('fonts/MullerRegular.eot');
@@ -277,7 +430,6 @@ body {
 	font-weight: normal;
 	font-style: normal;
 }
-
 @media screen and (min-width: 760px) {
 	[contents="landing"], 
 	[contents="boutique"],
@@ -285,6 +437,64 @@ body {
 	[contents="cv"] {
 		width: calc(100% - 200px) !important;
 	}
+	[contents="main"] {
+		h2 {
+			padding-left: 15px;
+		}
+		[contents="landing"] {
+			h1 {
+				font-size: 80px;
+				max-width: 340px;
+			}
+			canvas {
+				width: 130%;
+			}
+		}
+		[contents="boutique"] {
+			[contents="text"] {
+				p {
+					max-width: 320px;
+					text-align: left;
+				}
+			}
+			[contents="circles"] {
+				display: inline-block;
+			    width: 154px;
+			    position: absolute;
+			    top: 50px;
+			    right: 15px;
+				div {
+					display: inline-block;
+					margin: 14px 0 14px 18px;
+				}
+			}
+			[contents="list"] {
+				padding: 60px 0 30px 30px;
+				[contents="item"] {
+					padding: 9px 0;
+				}
+				img {
+					height: 42px;
+					width: 42px;
+					display: inline-block;
+				}
+				p {
+					padding: 10.5px 9px;
+					vertical-align: top;
+					font-weight: lighter;
+					display: inline-block;
+					max-width: 210px;
+				}
+			}
+			.pink-hint {
+				margin-left: 18px;
+				position: relative;
+				float: left;
+				left: 0;
+			}
+		}
+	}
+	
 	[contents="menu"] {
 		display: inline-block;
 		opacity: 100;
@@ -294,26 +504,65 @@ body {
 		a {
 			font-family: 'Muller';
 			color: #4d4d4d;
-			font-size: 15px;
+			font-size: 20px;
 			text-decoration: none;
 			display: block;
-			padding: 5px 0;
+			padding: 15px 0;
 			text-align: right;
 			font-weight: bold;
 		}
 	}
 }
 @media screen and (min-width: 1020px) {
+	.offcanvas {
+		width: calc(100% - 262px);
+		padding-left: 262px;
+	}
 	[contents="landing"], 
 	[contents="boutique"],
 	[contents="contact"],
 	[contents="cv"] {
-		width: calc(100% - 400px) !important;
+		width: calc(100% - 500px) !important;
 		margin-left: 260px;
 	}
-	.hidden-large {
-		position: fixed;
-		left: 0;
+	[contents="main"] {
+		[contents="landing"] {
+			h1 {
+				font-size: 96px;
+				max-width: 350px;
+				padding-top: 138px;
+			}
+			p {
+				font-size: 21px;
+				max-width: 440px;
+			}
+		}
+		img.hidden-large {
+			opacity: 1;
+			display: inline-block;
+			position: fixed;
+			left: 0;
+			width: 190px;
+			top: 32px;
+			left: 32px;
+			z-index: 99;
+		}
+		[contents="landing"] {
+			canvas {
+				width: 200%;
+			}
+		}
+	}
+	[contents="menu"] {
+		a {
+			font-size: 24px;
+			padding: 20px 0;
+			font-weight: normal;
+			transition: color .3s ease;
+		}
+		a:hover {
+			color: #f54a7e;
+		}
 	}
 	hr {
 		width: 50% !important;
