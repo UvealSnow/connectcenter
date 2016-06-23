@@ -97,9 +97,9 @@ body {
 					color: #f54a7e;
 				}
 				ul {
-					padding: 5px 10px 0 20%;
+					padding: 5px 10px 0 8%;
 					li {
-						font-size: 11px;
+						font-size: 10px;
 						padding-top: 2px;
 					}
 				}
@@ -120,7 +120,7 @@ body {
 
 		}
 		h2 {
-			padding: 20px 40px;
+			padding: 20px 40px 10px 40px;
 			display: inline-block;		
 		}
 	}
@@ -359,7 +359,7 @@ body {
 		border-top: 0;
 		border-bottom: 0;
 		p, a {
-			font-size: 15px;
+			font-size: 18px;
 			color: white;
 			text-align: right;
 			font-family: 'Muller';
@@ -369,8 +369,11 @@ body {
 			margin-right: 10px;
 		}
 		a {
+			font-size: 20px;
 			font-style: italic;
 			text-decoration: underline;
+			cursor: pointer;
+			padding-top: 8px;
 		}
 		h2 {
 			color: white;

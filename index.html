@@ -7,11 +7,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, handheld"/>
 		<script src="js/vendor/jquery.js"></script>
+		<script src="js/vendor/jquery-scrollto.js"></script>
 		<script src="js/vendor/gsap/TweenMax.min.js"></script>
 		<script src="js/vendor/gsap/TimelineMax.min.js"></script>
 		<script src="js/application.js"></script>
 	</head>
 	<body>
+		<a name="inicio" id="inicio"></a>
 		<div contents="left">
 			<h2>connect center</h2>
 		</div>
@@ -22,10 +24,11 @@
 				<h1>conecta <span class="pink">con</span> <span class="blue">tus</span> clientes</h1>
 				<p>Es el siglo XXII y necesitas conectar con tus clientes, externalizamos tus procesos de negocio con las herramientas tecnológicas más adecuadas a tus necesidades.</p>
 				<p>Empresa líder en servicios de gestión y atención de clientes.</p>
-				<a class="bottom" href>ver más <img src="img/down-arrow.svg" class="arrow"></a>
+				<a class="bottom" id="scroll-0" href="#quienes">ver más <img src="img/down-arrow.svg" class="arrow"></a>
 			</div>
 			<hr>
 			<div contents="boutique">
+				<a id="quienes" name="quienes"></a>
 				<h2>quiénes somos</h2>
 				<div contents="text">
 					<img src="img/pink-hint-1.svg" class="pink-hint">
@@ -41,6 +44,7 @@
 						<p>ver directorio</p>
 					</div>
 				</div>
+				<a id="servicios" name="servicios"></a>
 				<h2 class="blue">servicios</h2>
 				<div contents="list">
 					<div contents="item">
@@ -73,7 +77,7 @@
 					</div>
 				</div>
 				<h2 class="pink">consultoría</h2>
-				<p>Gestionamos tus procesos de negocio y te ofrecemos consultoria con innovación y enfoque al cliente.</p>
+				<p>Potencializamos los procesos de negocio desde tu centro de contacto.</p>
 				<div contents="list">
 					<div contents="item">
 						<img src="img/procesos.svg" alt="" class="pink">
@@ -123,16 +127,17 @@
 						<a href="http://www.ipeth.edu.mx/"><img src="img/cliente-8.png" alt="clientes"></a>
 					</div>
 				</div>
+				<a id="contacto" name="contacto"></a>
 				<h2>déjanos un mensaje</h2>
 				<p class="gray">o llámanos y prueba de primera mano nuestro servicio.</p>
 				<p>tel: <a href="tel:018008907766">01 800 890 7766</a></p>
 				<p>correo: <a class="mail" href="mailto:atencion@connectcenter.mx">atencion@connectcenter.mx</a></p>
 				<div contents="form">
 					<form>
-						<input type="text" name="" placeholder="Nombre">
-						<input type="text" name="" placeholder="Empresa">
-						<input type="tel" name="" placeholder="Teléfono">
-						<input type="email" name="" placeholder="Correo electrónico">
+						<input type="text" name="name" placeholder="Nombre">
+						<input type="text" name="company" placeholder="Empresa">
+						<input type="tel" name="phone" placeholder="Teléfono">
+						<input type="email" name="email" placeholder="Correo electrónico">
 						<textarea>Comentarios</textarea>
 						<button>Enviar</button>
 					</form>
@@ -140,6 +145,7 @@
 			</div>
 		</div>
 		<div contents="footer">
+			<a id="trabajos" name="trabajos"></a>
 			<div contents="cv">
 				<h2>¿Por qué trabajar en Connect Center?</h2>
 				<ul>
@@ -149,15 +155,15 @@
 					<li>Fondo de ahorro</li>
 				</ul>
 				<p>¿Estás interesado en trabajar con nosotros?</p>
-				<a data-button="cv-form">Mándanos tu CV.</a>
+				<a data-button="cv-form">Mándanos tu CV!</a>
 			</div>
 		</div>
 		<div contents="menu">
-			<a href>inicio</a>
-			<a href>nosotros</a>
-			<a href>servicios</a>
-			<a href>contacto</a>
-			<a href>bolsa de trabajo</a>
+			<a id="scroll-1" href="#inicio">inicio</a>
+			<a id="scroll-2" href="#quienes">nosotros</a>
+			<a id="scroll-3" href="#servicios">servicios</a>
+			<a id="scroll-4" href="#contacto">contacto</a>
+			<a id="scroll-5" href="#trabajos">bolsa de trabajo</a>
 		</div>
 		<div data-slide="infrastructure" class="full-page offcanvas">
 			<div class="content">
@@ -208,6 +214,8 @@
 							<li>Diplm. de Six Sigma, ITESM.</li>
 							<li>Diplm. de Finanzas, ITESM.</li>
 							<li>Diplm. de Admin. de Proyectos, ITESM.</li>
+							<li>Diplm. de Alta Dirección, Universidad Anahuac.</li>
+							<li>Diplm. de Mercadotecnia, Universidad Anahuac.</li>
 						</ul>
 					</div>
 					<div class="member">
@@ -226,56 +234,12 @@
 						<img src="img/placeholder.png">
 						<h3 class="blue">Carlos Cruz Ojeda</h3>
 						<h4>Tecnología</h4>
-						<h4>Ing. en Sistemas</h4>
+						<h4>Ing. en Sistemas, ITESM</h4>
 						<ul>
-							<li>Coord. Reg. COPC.</li>
-							<li>Diplm. de Six Sigma, ITESM.</li>
-							<li>Diplm. de Finanzas, ITESM.</li>
-							<li>Diplm. de Admin. de Proyectos, ITESM.</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div data-slide="directory" class="full-page offcanvas">
-			<div class="content">
-				<h2>directorio</h2>
-				<img src="img/close.svg" class="close-button">
-				<div class="generic">
-					<div class="member">
-						<img src="img/placeholder.png">
-						<h3 class="blue">Luis Eduardo Bustos Gorozpe</h3>
-						<h4>Director</h4>
-						<h4>Ing. Industrial</h4>
-						<ul>
-							<li>Coord. Reg. COPC.</li>
-							<li>Diplm. de Six Sigma, ITESM.</li>
-							<li>Diplm. de Finanzas, ITESM.</li>
-							<li>Diplm. de Admin. de Proyectos, ITESM.</li>
-						</ul>
-					</div>
-					<div class="member">
-						<img src="img/placeholder.png">
-						<h3 class="blue">Antonio Perez Palestina</h3>
-						<h4>Operaciones</h4>
-						<h4>Ing. Industrial</h4>
-						<ul>
-							<li>Coord. Reg. COPC.</li>
-							<li>Diplm. de Six Sigma, ITESM.</li>
-							<li>Diplm. de Finanzas, ITESM.</li>
-							<li>Diplm. de Admin. de Proyectos, ITESM.</li>
-						</ul>
-					</div>
-					<div class="member">
-						<img src="img/placeholder.png">
-						<h3 class="blue">Carlos Cruz Ojeda</h3>
-						<h4>Tecnología</h4>
-						<h4>Ing. en Sistemas</h4>
-						<ul>
-							<li>Coord. Reg. COPC.</li>
-							<li>Diplm. de Six Sigma, ITESM.</li>
-							<li>Diplm. de Finanzas, ITESM.</li>
-							<li>Diplm. de Admin. de Proyectos, ITESM.</li>
+							<li>Diplm. en Finanzas, ITESM.</li>
+							<li>Diplm. en Gestión de Calidad y Auditor ISO 9001, Bureau Veritas.</li>
+							<li>Diplm. en Seguridad y Redes, UAQ.</li>
+							<li>Diplm. en Networking, HP.</li>
 						</ul>
 					</div>
 				</div>
@@ -298,5 +262,27 @@
 			</div>
 		</div>	
 		<script type="text/javascript" src="js/vendor/canvas.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$('#scroll-0').click(function () {
+					$('#quienes').ScrollTo({ duration: 800, easing: 'linear' });
+				});
+				$('#scroll-1').click(function () {
+					$('#inicio').ScrollTo({ duration: 800, easing: 'linear' });
+				});
+				$('#scroll-2').click(function () {
+					$('#quienes').ScrollTo({ duration: 800, easing: 'linear' });
+				});
+				$('#scroll-3').click(function () {
+					$('#servicios').ScrollTo({ duration: 800, easing: 'linear' });
+				});
+				$('#scroll-4').click(function () {
+					$('#contacto').ScrollTo({ duration: 800, easing: 'linear' });
+				});
+				$('#scroll-5').click(function () {
+					$('#trabajos').ScrollTo({ duration: 800, easing: 'linear' });
+				});	
+			});
+		</script>
 	</body>
 </html>
