@@ -2,6 +2,11 @@
 	margin: 0;
 	padding: 0;
 }
+.clear:after {
+	content: "";
+  	display: table;
+  	clear: both;
+}
 h1, h2, p {
 	font-family: 'Muller';
 	font-weight: lighter;
@@ -14,18 +19,21 @@ body {
 	background-color: #111;
 }
 .offcanvas {
-	height: 100%;
-	position:fixed; 
-	left:100%; 
-	background:rgba(11,11,11,.99);
-	z-index:50;
+	height: 100vh;
+	position: fixed; 
+	left: 100%; 
+	background: rgba(11,11,11,.99);
+	z-index: 50;
 	color: white;
 	font-family: 'Muller';
 	border: 2px solid #4a4f55; 
 	border-top: 0;
 	border-bottom: 0;
 	width: calc(100% - 4px);
+	overflow-y: scroll;
+	overflow-x: hidden;
 	.content {
+		padding-bottom: 30px;
 		.close-button {
 			height: 25px;
 		    width: 25px;
@@ -38,6 +46,7 @@ body {
 			position: relative;
 		}
 		.paragraph {
+			padding-top: 50px;
 			img {
 				padding-left: 40px;
 			}
@@ -56,7 +65,6 @@ body {
 				font-size: 16px;
 				padding-left: 85px;
 				color: #108ca7;
-				display: inline-block;
 				top: -60px;
 			}
 			ul, hx {
@@ -116,8 +124,42 @@ body {
 				margin: 5px auto;
 			}
 		}
-		.form {
-
+		.generic {
+			padding-top: 50px;
+			.service {
+				display: block;
+				margin: 18px auto;
+				width: 90%;
+				p {
+					font-size: 14px;
+					max-width: 70%;
+					display: inline-block;
+					line-height: 125%;
+					margin-bottom: 8px;
+				}
+				p:not(:first-of-type) {
+					max-width: 80%;
+				}
+				img {
+					display: inline-block;
+					vertical-align: top;
+					padding: 0 15px 15px 0;
+					width: 55px;
+					height: 55px;
+				}
+			}
+		}
+		[contents="clients"],
+		[contents="form"] {
+			padding-left: 30px;
+			padding-bottom: 30px;
+			[contents="partner"] {
+				margin:  15px;
+				display: inline-block;
+				img {
+					border-radius: 10px;
+				}
+			}
 		}
 		h2 {
 			padding: 20px 40px 10px 40px;
@@ -152,7 +194,7 @@ body {
 		font-size: 15px;
 		max-width: 300px;
 		line-height: 1.2;
-		display: inline-block;
+		display: block;
 		span {
 			font-style: italic;
 			font-weight: bold;
@@ -223,17 +265,19 @@ body {
 			p {
 				padding: 0 0 0 12px;
 				font-size: 15px;
-				max-width: 240px;
+				max-width: 300px;
 				vertical-align: top;
 				display: block;
 				padding-left: 58px;
-				text-align: justify;
 			}
 			p:last-child {
 				padding-top: 12px;
 			}
 		}
-		[contents="circles"] {
+		[contents="circles"],
+		[contents="circles"].horizontal {
+			margin-bottom: 50px;
+			margin-left: 18px;
 			div {
 				height: 120px;
 				width: 120px;
@@ -269,6 +313,12 @@ body {
 			.blue:hover {
 				border-color: #016479;
 			}
+		}
+		[contents="circles"].horizontal {
+			position: relative;
+			display: block;
+			clear: both;
+			width: 100%;
 		}
 		[contents="list"] {
 			padding: 60px 0 30px 30px;
@@ -354,12 +404,12 @@ body {
 	width: 100%;
 	[contents="cv"] {
 		position: relative;
-		min-height: 300px;
+		min-height: 340px;
 		border: 2px solid #4a4f55;
 		border-top: 0;
 		border-bottom: 0;
 		p, a {
-			font-size: 18px;
+			font-size: 16px;
 			color: white;
 			text-align: right;
 			font-family: 'Muller';
@@ -462,6 +512,27 @@ body {
 	font-weight: normal;
 	font-style: normal;
 }
+@media screen and (min-width: 568px) and (min-height: 320px) {
+	[contents="main"] {
+		[contents="landing"] {
+			h1 {
+				padding-top: 18px;
+			}
+			p {
+				max-width: 450px;
+				padding-bottom: 0;
+				padding-top: 4px;
+			}
+			p:last-of-type {
+				padding-top: 0;
+			}
+			a.bottom {
+				padding-top: 16px;
+				font-size: 16px;
+			}
+		}
+	}
+}
 @media screen and (min-width: 760px) {
 	[contents="landing"], 
 	[contents="boutique"],
@@ -499,6 +570,9 @@ body {
 					display: inline-block;
 					margin: 14px 0 14px 18px;
 				}
+			}
+			[contents="circles"].horizontal {
+				margin-left: 43px;
 			}
 			[contents="list"] {
 				padding: 60px 0 30px 30px;
@@ -560,7 +634,7 @@ body {
 			border: 2px solid #4a4f55; 
 			border-top: 0;
 			border-bottom: 0;
-			height: 100%;
+			min-height: 105%;
 			.close-button {
 				right: 200px;
 			}
@@ -706,6 +780,16 @@ body {
 					}
 				}
 			}
+			.team {
+				.member {
+					ul {
+						padding: 5px 10px 0 20%;
+						li {
+							font-size: 14px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -734,11 +818,6 @@ body {
 					}
 					h4 {
 						font-size: 15px;
-					}
-					ul {
-						li {
-							font-size: 14px;
-						}
 					}
 					img {
 						width: 80px;

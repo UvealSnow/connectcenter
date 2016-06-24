@@ -32,5 +32,22 @@ $(document).ready(
 	 			showSlide( $(this) ); 
 	 		});
 
-
+	 	$('#scroll-0').click(function () {
+	 		$('#quienes').ScrollTo({ duration: 800, easing: 'linear' });
+	 	});
+	 	$('#scroll-1').click(function () {
+	 		$('#inicio').ScrollTo({ duration: 800, easing: 'linear' });
+	 	});
+	 	$('#scroll-2').click(function () {
+	 		$('#quienes').ScrollTo({ duration: 800, easing: 'linear' });
+	 	});
+	 	$('#scroll-3').click(function () {
+	 		$('#servicios').ScrollTo({ duration: 800, easing: 'linear' });
+	 	});
+	 	$('#scroll-4').click(function () {
+	 		$('#contacto').ScrollTo({ duration: 800, easing: 'linear' });
+	 	});
+	 	$('#scroll-5').click(function () {
+	 		$('#trabajos').ScrollTo({ duration: 800, easing: 'linear' });
+	 	});	
 	}); 
