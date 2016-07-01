@@ -18,6 +18,16 @@ h2 {
 body {
 	background-color: #111;
 }
+.pink {
+	color: #f54a7e;
+	fill: #f54a7e; 
+	stroke: #f54a7e;
+}
+.blue {
+	color: #18b3d5;
+	fill: #18b3d5;
+	stroke: #18b3d5;
+}
 .offcanvas {
 	height: 100vh;
 	position: fixed; 
@@ -130,15 +140,20 @@ body {
 				display: block;
 				margin: 18px auto;
 				width: 90%;
-				p {
-					font-size: 14px;
-					max-width: 70%;
+				p:first-of-type {
+					font-size: 18px;
 					display: inline-block;
-					line-height: 125%;
-					margin-bottom: 8px;
+					padding-left: 0;
 				}
-				p:not(:first-of-type) {
+				p {
 					max-width: 80%;
+					font-size: 18px;
+					padding-left: 75px;
+					line-height: 125%;
+					margin-bottom: 16px;
+					b {
+						font-size: 20px;
+					}
 				}
 				img {
 					display: inline-block;
@@ -159,6 +174,16 @@ body {
 				img {
 					border-radius: 10px;
 				}
+			}
+		}
+		[contents="img"] {
+			img {
+				width: 45%;
+				max-width: 320px;
+				display: inline-block;
+				margin: .5vw;
+				border: 2px solid #18b3d5;
+				border-radius: 5px;
 			}
 		}
 		h2 {
@@ -191,7 +216,7 @@ body {
 	}
 	p {
 		padding: 18px 0 18px 30px;
-		font-size: 15px;
+		font-size: 18px;
 		max-width: 300px;
 		line-height: 1.2;
 		display: block;
@@ -299,6 +324,7 @@ body {
 					left: 50%;
 					transform: translate(-50%, -50%);
 					cursor: pointer;
+					font-size: 15px !important;
 				}
 			}
 			.pink {
@@ -352,7 +378,7 @@ body {
 	}
 	[contents="contact"] {
 		p {
-			font-size: 15px;
+			font-size: 18px;
 			padding: 0 0 20px 30px;
 			display: block;
 		}
@@ -371,6 +397,7 @@ body {
 			padding-top: 20px;
 			color: #8a8a8a;
 			width: 180px;
+			font-size: 18px;
 		}
 		[contents="clients"],
 		[contents="form"] {
@@ -385,16 +412,6 @@ body {
 				}
 			}
 		}
-	}
-	.pink {
-		color: #f54a7e;
-		fill: #f54a7e; 
-		stroke: #f54a7e;
-	}
-	.blue {
-		color: #18b3d5;
-		fill: #18b3d5;
-		stroke: #18b3d5;
 	}
 }
 [contents="footer"] {
@@ -435,6 +452,7 @@ body {
 				color: white;
 				font-family: 'Muller';
 				line-height: 130%;
+				font-size: 18px;
 			}
 		}
 	}
@@ -556,8 +574,9 @@ body {
 		[contents="boutique"] {
 			[contents="text"] {
 				p {
-					max-width: 320px;
+					max-width: 280px;
 					text-align: left;
+					font-size: 18px;
 				}
 			}
 			[contents="circles"] {
