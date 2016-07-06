@@ -49,12 +49,14 @@ body { background-color: #111; }
 
 [contents="main"] { position: relative; padding: 0; }
 [contents="main"] h1, [contents="main"] h2, [contents="main"] p { color: white; padding-left: 30px; }
-[contents="main"] h1 { text-transform: uppercase; font-family: 'Simplifica'; font-size: 68px; max-width: 280px; padding-top: 98px; }
+[contents="main"] h1 { text-transform: uppercase; font-family: 'Simplifica'; font-size: 68px; max-width: 280px; padding-top: 75px; }
 [contents="main"] h2 { padding-top: 30px; }
-[contents="main"] p { padding: 18px 0 18px 30px; font-size: 18px; max-width: 300px; line-height: 1.2; display: block; }
+[contents="main"] p.first { padding: 9px 0 0px 30px; }
+[contents="main"] p { font-size: 16px; max-width: 300px; line-height: 1.2; display: block; }
 [contents="main"] p span { font-style: italic; font-weight: bold; }
 [contents="main"] img { display: inline-block; }
-[contents="main"] img.hidden-large { opacity: 0; display: none; }
+[contents="main"] div.logo { display: block; position: fixed; background-color: #000; height: 48.42px; width: calc(100% - 4px); z-index: 999; }
+[contents="main"] div.logo img.hidden-large { width: 96px; position: fixed; right: 15px; top: 10px; float: right; }
 [contents="main"] hr { border: 1.5px solid #4a4f55; width: 45%; }
 [contents="main"] [contents="landing"], [contents="main"] [contents="boutique"], [contents="main"] [contents="contact"], [contents="main"] [contents="footer"] { min-height: 100vh; width: calc(100% - 4px); border: 2px solid #4a4f55; border-top: 0; border-bottom: 0; margin-bottom: -3px; position: relative; overflow: hidden; }
 [contents="main"] [contents="landing"] a.bottom { text-transform: uppercase; text-decoration: none; color: white; font-family: 'Simplifica'; font-size: 20px; max-width: 30px; position: absolute; top: calc(100% - 80px); left: 20px; }
@@ -88,13 +90,15 @@ body { background-color: #111; }
 [contents="main"] [contents="contact"] [contents="clients"] [contents="partner"], [contents="main"] [contents="contact"] [contents="form"] [contents="partner"] { margin: 15px; display: inline-block; }
 [contents="main"] [contents="contact"] [contents="clients"] [contents="partner"] img, [contents="main"] [contents="contact"] [contents="form"] [contents="partner"] img { border-radius: 10px; }
 
-[contents="footer"] { background-color: #1c1c1c; min-height: 150px; margin: 0; width: 100%; }
+[contents="footer"] { background-color: #18b3d5; min-height: 150px; margin: 0; width: 100%; }
 [contents="footer"] [contents="cv"] { position: relative; min-height: 340px; border: 2px solid #4a4f55; border-top: 0; border-bottom: 0; }
-[contents="footer"] [contents="cv"] p, [contents="footer"] [contents="cv"] a { font-size: 16px; color: white; text-align: right; font-family: 'Muller'; display: block; position: relative; bottom: -65px; margin-right: 10px; }
+[contents="footer"] [contents="cv"] p, [contents="footer"] [contents="cv"] a { font-size: 16px; color: white; text-align: right; font-family: 'Muller'; display: block; position: relative; top: -18px; margin-right: 10px; }
 [contents="footer"] [contents="cv"] a { font-size: 20px; font-style: italic; text-decoration: underline; cursor: pointer; padding-top: 8px; }
 [contents="footer"] [contents="cv"] h2 { color: white; padding: 30px 0 0 30px; }
 [contents="footer"] [contents="cv"] ul { padding: 30px 0 0 60px; }
 [contents="footer"] [contents="cv"] ul li { color: white; font-family: 'Muller'; line-height: 130%; font-size: 18px; }
+[contents="footer"] [contents="cv"] [contents="img"] { padding-top: 19px; padding-bottom: 75px; }
+[contents="footer"] [contents="cv"] [contents="img"] img { padding: 8px 0 0 8px; width: 45%; max-width: 300px; display: inline-block; }
 
 [contents="form"] { max-width: 260px; padding-top: 20px; padding-bottom: 150px; padding-left: 30px; padding-bottom: 30px; }
 [contents="form"] input { width: 100%; border: 2px solid #8a8a8a; padding: 9px 0 9px 9px; margin: 9px 0; background-color: transparent; }
@@ -113,8 +117,10 @@ body { background-color: #111; }
   [contents="main"] [contents="landing"] a.bottom { padding-top: 16px; font-size: 16px; } }
 @media screen and (min-width: 760px) { [contents="landing"], [contents="boutique"], [contents="contact"], [contents="cv"] { width: calc(100% - 200px) !important; }
   [contents="main"] h2 { padding-left: 15px; }
-  [contents="main"] [contents="landing"] h1 { font-size: 80px; max-width: 340px; }
+  [contents="main"] [contents="landing"] h1 { font-size: 80px; max-width: 340px; padding-top: 105px; }
   [contents="main"] [contents="landing"] canvas { width: 130%; }
+  [contents="main"] [contents="landing"] div.logo { width: calc(100% - 200px); height: 67.38px; }
+  [contents="main"] [contents="landing"] div.logo img.hidden-large { right: 215px; float: right; width: 160px; }
   [contents="main"] [contents="boutique"] [contents="text"] p { max-width: 280px; text-align: left; font-size: 18px; }
   [contents="main"] [contents="boutique"] [contents="circles"] { display: inline-block; width: 154px; position: absolute; top: 50px; right: 15px; }
   [contents="main"] [contents="boutique"] [contents="circles"] div { display: inline-block; margin: 14px 0 14px 18px; }
@@ -145,8 +151,9 @@ body { background-color: #111; }
   [contents="landing"], [contents="boutique"], [contents="contact"], [contents="cv"] { width: calc(100% - 500px) !important; margin-left: 260px; }
   [contents="main"] [contents="landing"] h1 { font-size: 96px; max-width: 350px; padding-top: 138px; }
   [contents="main"] [contents="landing"] p { font-size: 21px; max-width: 440px; }
-  [contents="main"] img.hidden-large { opacity: 1; display: inline-block; position: fixed; left: 0; width: 190px; top: 32px; left: 32px; z-index: 99; }
   [contents="main"] [contents="landing"] canvas { width: 200%; }
+  [contents="main"] [contents="landing"] div.logo { width: calc(100% - 500px); background-color: transparent; }
+  [contents="main"] [contents="landing"] div.logo img.hidden-large { opacity: 1; display: inline-block; position: fixed; left: 0; width: 190px; top: 32px; left: 32px; z-index: 99; }
   [contents="menu"] a { font-size: 18px; max-width: 80px; padding: 20px 0; font-weight: normal; -webkit-transition: color .3s ease; transition: color .3s ease; }
   [contents="menu"] a:hover { color: #f54a7e; }
   hr { width: 50% !important; }

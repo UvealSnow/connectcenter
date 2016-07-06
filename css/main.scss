@@ -210,14 +210,16 @@ body {
 		font-family: 'Simplifica';
 		font-size: 68px;
 		max-width: 280px;
-		padding-top: 98px;
+		padding-top: 75px;
 	}
 	h2 {
 		padding-top: 30px;
 	}
+	p.first {
+		padding: 9px 0 0px 30px;
+	}
 	p {
-		padding: 18px 0 18px 30px;
-		font-size: 18px;
+		font-size: 16px;
 		max-width: 300px;
 		line-height: 1.2;
 		display: block;
@@ -229,10 +231,20 @@ body {
 	img {
 		display: inline-block;
 	}
-	img.hidden-large {
-		opacity: 0;
-		display: none;
-
+	div.logo {
+		display: block;
+		position: fixed;
+		background-color: #000;
+		height: 48.42px;
+		width: calc(100% - 4px);
+		z-index: 999;
+		img.hidden-large {
+			width: 96px;
+			position: fixed;
+			right: 15px;
+			top: 10px;
+			float: right;
+		}
 	}
 	hr {
 		border: 1.5px solid #4a4f55;
@@ -416,7 +428,7 @@ body {
 	}
 }
 [contents="footer"] {
-	background-color: #1c1c1c;
+	background-color: #18b3d5;
 	min-height: 150px;
 	margin: 0;
 	width: 100%;
@@ -433,7 +445,7 @@ body {
 			font-family: 'Muller';
 			display: block;
 			position: relative;
-			bottom: -65px;
+			top: -18px;
 			margin-right: 10px;
 		}
 		a {
@@ -454,6 +466,16 @@ body {
 				font-family: 'Muller';
 				line-height: 130%;
 				font-size: 18px;
+			}
+		}
+		[contents="img"] {
+			padding-top: 19px;
+			padding-bottom: 75px;
+			img {
+				padding: 8px 0 0 8px;
+				width: 45%;
+				max-width: 300px;
+				display: inline-block;
 			}
 		}
 	}
@@ -567,9 +589,19 @@ body {
 			h1 {
 				font-size: 80px;
 				max-width: 340px;
+				padding-top: 105px;
 			}
 			canvas {
 				width: 130%;
+			}
+			div.logo {
+				width: calc(100% - 200px);
+				height: 67.38px;
+				img.hidden-large {
+					right: 215px;;
+					float: right;
+					width: 160px;
+				}
 			}
 		}
 		[contents="boutique"] {
@@ -734,20 +766,22 @@ body {
 				font-size: 21px;
 				max-width: 440px;
 			}
-		}
-		img.hidden-large {
-			opacity: 1;
-			display: inline-block;
-			position: fixed;
-			left: 0;
-			width: 190px;
-			top: 32px;
-			left: 32px;
-			z-index: 99;
-		}
-		[contents="landing"] {
 			canvas {
 				width: 200%;
+			}
+			div.logo {
+				width: calc(100% - 500px);
+				background-color: transparent;
+				img.hidden-large {
+					opacity: 1;
+					display: inline-block;
+					position: fixed;
+					left: 0;
+					width: 190px;
+					top: 32px;
+					left: 32px;
+					z-index: 99;
+				}
 			}
 		}
 	}
