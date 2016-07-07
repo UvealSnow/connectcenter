@@ -237,7 +237,7 @@ body {
 		background-color: #000;
 		height: 48.42px;
 		width: calc(100% - 4px);
-		z-index: 999;
+		z-index: 10;
 		img.hidden-large {
 			width: 96px;
 			position: fixed;
@@ -430,12 +430,9 @@ body {
 [contents="footer"] {
 	background-color: #18b3d5;
 	min-height: 150px;
-	margin: 0;
-	width: 100%;
 	[contents="cv"] {
 		position: relative;
 		min-height: 340px;
-		border: 2px solid #4a4f55;
 		border-top: 0;
 		border-bottom: 0;
 		p, a {
@@ -446,7 +443,8 @@ body {
 			display: block;
 			position: relative;
 			top: -18px;
-			margin-right: 10px;
+			left: calc(100% - 340px);
+			width: 330px;
 		}
 		a {
 			font-size: 20px;
@@ -454,6 +452,7 @@ body {
 			text-decoration: underline;
 			cursor: pointer;
 			padding-top: 8px;
+
 		}
 		h2 {
 			color: white;
@@ -474,7 +473,7 @@ body {
 			img {
 				padding: 8px 0 0 8px;
 				width: 45%;
-				max-width: 300px;
+				max-width: 200px;
 				display: inline-block;
 			}
 		}
@@ -578,7 +577,7 @@ body {
 	[contents="landing"], 
 	[contents="boutique"],
 	[contents="contact"],
-	[contents="cv"] {
+	[contents="footer"] {
 		width: calc(100% - 200px) !important;
 	}
 	[contents="main"] {
@@ -689,6 +688,7 @@ body {
 			min-height: 105%;
 			.close-button {
 				right: 200px;
+				z-index: 99;
 			}
 			.paragraph {
 				img {
@@ -751,7 +751,7 @@ body {
 	[contents="landing"], 
 	[contents="boutique"],
 	[contents="contact"],
-	[contents="cv"] {
+	[contents="footer"] {
 		width: calc(100% - 500px) !important;
 		margin-left: 260px;
 	}
