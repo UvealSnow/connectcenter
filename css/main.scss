@@ -176,6 +176,9 @@ body {
 					border: 3px solid #108ca7;
 				}
 			}
+			p {
+				font-size: 16px;
+			}
 		}
 		[contents="img"] {
 			img {
@@ -491,13 +494,16 @@ body {
 		padding: 9px 0 9px 9px;
 		margin: 9px 0;
 		background-color: transparent;
+		color: #18b3d5;
+		font-family: 'Muller';
+		font-size: 16px;
 	}
 	textarea {
 		margin: 9px 0;
 		padding: 9px;
 		width: 249px;
 		height: 100px;
-		color: #8a8a8a;
+		color: #18b3d5;
 		border: 2px solid #8a8a8a;
 		background-color: transparent;
 		font-family: 'Muller';

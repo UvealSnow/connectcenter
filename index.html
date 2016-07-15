@@ -73,12 +73,13 @@
 				<p>tel: <a href="tel:018008907766">01 800 890 7766</a></p>
 				<p>correo: <a class="mail" href="mailto:atencion@connectcenter.mx">atencion@connectcenter.mx</a></p>
 				<div contents="form">
-					<form>
+					<form action="https://formspree.io/atencion@connectcenter.mx" method="POST">
 						<input type="text" name="name" placeholder="Nombre">
 						<input type="text" name="company" placeholder="Empresa">
 						<input type="tel" name="phone" placeholder="Teléfono">
 						<input type="email" name="email" placeholder="Correo electrónico">
-						<textarea>Comentarios</textarea>
+						<input type="hidden" name="_next" value="http://connectcenter.mx/thanks.html" />
+						<textarea placeholder="Comentarios"></textarea>
 						<button>Enviar</button>
 					</form>
 				</div>
@@ -203,12 +204,13 @@
 				<h2>Envíanos tu CV</h2>
 				<img src="img/close.svg" class="close-button">
 				<div contents="form">
-					<form>
+					<form action="https://formspree.io/atencion@connectcenter.mx" method="POST">
 						<input type="text" name="name" placeholder="Nombre">
 						<input type="text" name="last" placeholder="Apellido">
 						<input type="tel" name="tele" placeholder="Teléfono">
 						<input type="email" name="mail" placeholder="Correo electrónico">
-						<input type="file" name="mail" placeholder="Correo electrónico">
+						<input type="file" name="mail" placeholder="Archivo CV">
+						<input type="hidden" name="_next" value="http://connectcenter.mx/thanks.html" />
 						<button>Enviar</button>
 					</form>
 				</div>
@@ -298,6 +300,9 @@
 					<div contents="partner">
 						<a target="_blank" href="http://www.ipeth.edu.mx/"><img src="img/cliente-8.png" alt="clientes"></a>
 					</div>
+					<br>
+					<p class="small">Experiencia en campañas offshore -España-, con ahorro estimado de 30% del coste.</p><br>
+					<p class="small">Nuestro board directivo es parte del consejo de la industria.</p>
 				</div>
 			</div>
 		</div>

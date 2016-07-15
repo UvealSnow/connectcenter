@@ -42,6 +42,7 @@ body { background-color: #111; }
 .offcanvas .content [contents="clients"], .offcanvas .content [contents="form"] { padding-left: 30px; padding-bottom: 30px; }
 .offcanvas .content [contents="clients"] [contents="partner"], .offcanvas .content [contents="form"] [contents="partner"] { margin: 15px; display: inline-block; }
 .offcanvas .content [contents="clients"] [contents="partner"] img, .offcanvas .content [contents="form"] [contents="partner"] img { border-radius: 10px; border: 3px solid #108ca7; }
+.offcanvas .content [contents="clients"] p, .offcanvas .content [contents="form"] p { font-size: 16px; }
 .offcanvas .content [contents="img"] img { width: 45%; max-width: 320px; display: inline-block; margin: .5vw; border: 2px solid #18b3d5; border-radius: 5px; }
 .offcanvas .content h2 { padding: 20px 40px 10px 40px; display: inline-block; }
 
@@ -101,8 +102,8 @@ body { background-color: #111; }
 [contents="footer"] [contents="cv"] [contents="img"] img { padding: 8px 0 0 8px; width: 45%; max-width: 200px; display: inline-block; }
 
 [contents="form"] { max-width: 260px; padding-top: 20px; padding-bottom: 150px; padding-left: 30px; padding-bottom: 30px; }
-[contents="form"] input { width: 100%; border: 2px solid #8a8a8a; padding: 9px 0 9px 9px; margin: 9px 0; background-color: transparent; }
-[contents="form"] textarea { margin: 9px 0; padding: 9px; width: 249px; height: 100px; color: #8a8a8a; border: 2px solid #8a8a8a; background-color: transparent; font-family: 'Muller'; font-size: 16px; resize: none; }
+[contents="form"] input { width: 100%; border: 2px solid #8a8a8a; padding: 9px 0 9px 9px; margin: 9px 0; background-color: transparent; color: #18b3d5; font-family: 'Muller'; font-size: 16px; }
+[contents="form"] textarea { margin: 9px 0; padding: 9px; width: 249px; height: 100px; color: #18b3d5; border: 2px solid #8a8a8a; background-color: transparent; font-family: 'Muller'; font-size: 16px; resize: none; }
 [contents="form"] button { margin: 9px 0; width: 272px; padding: 9px; color: #f84d7f; border: 2px solid #f84d7f; background-color: transparent; font-family: 'Muller'; font-size: 16px; }
 [contents="form"] ::-webkit-input-placeholder { font-family: 'Muller'; font-size: 16px; }
 [contents="form"] :-moz-placeholder { /* Firefox 18- */ font-family: 'Muller'; font-size: 16px; }
